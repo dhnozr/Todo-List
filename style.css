@@ -3,3 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.container {
+  min-height: 100vh;
+  background: #c33764; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1d2671, #c33764);
+  background: linear-gradient(to right, #1d2671, #c33764);
+  color: #fff;
+}
