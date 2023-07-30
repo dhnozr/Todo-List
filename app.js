@@ -22,8 +22,10 @@ function addTodo(e) {
     spanEl.innerHTML = '\u00d7';
 
     liEl.appendChild(spanEl);
+    saveTodo();
   }
   inputBox.value = '';
+  saveTodo();
 }
 
 listContainer.addEventListener('click', removeAndCheckTodo);
@@ -31,7 +33,20 @@ listContainer.addEventListener('click', removeAndCheckTodo);
 function removeAndCheckTodo(e) {
   if (e.target.tagName === 'LI') {
     e.target.classList.toggle('checked');
+    saveTodo();
   } else if (e.target.tagName === 'SPAN') {
     e.target.parentElement.remove();
+    saveTodo();
   }
 }
+
+// save the local storage
+function saveTodo() {
+  localStorage.setItem('todo', listContainer.innerHTML);
+}
+
+//get from local storage
+function getTodo() {
+  listContainer.innerHTML = localStorage.getItem('todo');
+}
+getTodo();
