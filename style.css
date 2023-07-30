@@ -21,3 +21,37 @@
   border-radius: 10px;
   margin-top: 100px;
 }
+
+.todo-app h1 {
+  color: #1d2671;
+  margin-bottom: 20px;
+}
+
+#form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 10px 10px;
+  background-color: #c33764;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
