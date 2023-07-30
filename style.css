@@ -55,3 +55,51 @@ button {
   cursor: pointer;
   border-radius: 40px;
 }
+
+ul li {
+  padding: 12px 8px 12px 50px;
+  list-style: none;
+  font-size: 17px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-image: url(/images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  left: 16px;
+  top: 11px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(/images/checked.png);
+}
+
+span {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #555;
+  border-radius: 50%;
+}
+
+span:hover {
+  background: #edeef0;
+}
